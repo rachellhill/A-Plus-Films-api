@@ -25,6 +25,14 @@ app.get('/api/v1/users/:username', (request, response) => {
   response.status(200).json(user)
 });
 
+app.post('/api/v1/users/:username', (request, response) => {
+  const { username } = request.params;
+  const user = app.locals.users.find(user => username === user.username)
+  user.watchedMovies.push(request.body)
+
+  response.status(201).json(request.body);
+})
+
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
 });
