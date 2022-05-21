@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
+app.use(express.json());
 app.use(cors());
 
 app.set('port', process.env.PORT || 3001);
@@ -30,7 +31,7 @@ app.post('/api/v1/users/:username', (request, response) => {
   const user = app.locals.users.find(user => username === user.username)
   user.watchedMovies.push(request.body)
 
-  response.status(201).json(request.body);
+  response.status(201).json({message: 'good job', post: request.body});
 })
 
 app.listen(app.get('port'), () => {
