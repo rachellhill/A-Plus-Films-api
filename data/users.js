@@ -5,7 +5,7 @@ let usersData = [
     watchedMovies: [
       {
         id: 694919,
-        userRating: 0
+        userRating: '0'
       }
     ]
   },
@@ -15,7 +15,7 @@ let usersData = [
     watchedMovies: [
       {
         id: 337401,
-        userRating: 4
+        userRating: '4'
       }
     ]
   }
