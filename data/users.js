@@ -1,7 +1,6 @@
 let usersData = [
   {
     username: 'rachel',
-    password: 'movies',
     watchedMovies: [
       {
         id: 694919,
@@ -11,11 +10,19 @@ let usersData = [
   },
   {
     username: 'artan',
-    password: 'movies',
     watchedMovies: [
       {
         id: 337401,
         userRating: '4'
+      }
+    ]
+  },
+  {
+    username: 'user',
+    watchedMovies: [
+      {
+        id: 718444,
+        userRating: '4.7'
       }
     ]
   }
